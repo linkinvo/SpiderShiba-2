@@ -1,0 +1,434 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* html {
+  overflow: hidden;
+
+} */
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "SF Pro Display";
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 1920px;
+  height: 10131px;
+}
+
+.header {
+  height: 925px;
+
+  background-image: url("../image/bg.png");
+}
+
+.logo {
+  position: absolute;
+  width: 253px;
+  height: 50px;
+  left: 92px;
+  top: 25px;
+}
+
+/* .header_nav {
+  display: flex;
+  position: absolute;
+  width: 1063px;
+  height: 20px;
+  left: 525px;
+  top: 40px;
+} */
+
+.header_nav_ul {
+  display: flex;
+  position: absolute;
+  width: 1063px;
+  height: 20px;
+  left: 525px;
+  top: 40px;
+  color: #ffffff;
+}
+
+.header_nav_li {
+  margin-right: 25px;
+}
+
+.header_button {
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  left: 1658px;
+  top: 30px;
+  color: #ffffff;
+  margin-right: 92px;
+
+  background: #ac1216;
+  border-radius: 10px;
+  border: 0;
+}
+
+.header_content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 102px;
+}
+
+.header_item_h1 {
+  position: absolute;
+  width: 848px;
+  height: 180px;
+  left: 92px;
+  top: 168px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 90px;
+
+  display: flex;
+  align-items: center;
+
+  color: #e11d2e;
+}
+
+.header_item_p1 {
+  position: absolute;
+  width: 848px;
+  height: 30px;
+  left: 92px;
+  top: 353px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  color: #71768e;
+}
+
+.header_item_p2 {
+  position: absolute;
+  width: 682px;
+  height: 114px;
+  left: 92px;
+  top: 423px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+
+  color: #a0a3b5;
+}
+
+.header_row_button1 {
+  position: absolute;
+  width: 295px;
+  height: 80px;
+  left: 93px;
+  top: 583px;
+  color: #ffffff;
+  background: #e11d2e;
+  border-radius: 10px;
+  border: 0;
+  font-size: 25px;
+  line-height: 30px;
+}
+.header_row_button2 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 379px;
+  height: 80px;
+  left: 413px;
+  top: 583px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 0;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.wallet_address {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 699px;
+  height: 75px;
+  left: 93px;
+  top: 683px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+}
+
+.wallet_address_span {
+  margin: 14px 0 0 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.wallet_address_p {
+  margin-left: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.header_spidershiba_img {
+  position: absolute;
+  left: 1126.5px;
+  right: 10.42%;
+  top: 189.3px;
+  bottom: 87.35%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@-moz-keyframes scroll {
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.header_ticker {
+  display: flex;
+  width: 1920px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header_ticker span {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 38px;
+
+  left: 0px;
+  top: 925px;
+  color: #fff50099;
+  background: #5a4039;
+  /* padding-left: 100%; */
+  /* -webkit-animation: scroll infinite linear; */
+  /* -moz-animation: scroll 10s infinite linear; */
+  animation: scroll 100s infinite linear;
+}
+
+.container_main {
+  background: #101932;
+  width: 1920px;
+  height: 10131px;
+}
+
+.company_line {
+  display: flex;
+  justify-content: center;
+}
+.line_img {
+  margin-top: 71px;
+  margin-right: 10px;
+  opacity: 0.1;
+}
+
+.object_earth {
+  display: flex;
+}
+
+.center_object_earth_spiderweb {
+  position: absolute;
+  left: 26%;
+  top: 914px;
+}
+
+.center_object_earth {
+  position: absolute;
+  left: 41%;
+  margin-top: 158px;
+}
+
+.center_object_title {
+  position: absolute;
+  width: 552px;
+  height: 126px;
+  left: 682px;
+  top: 1152px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
+}
+
+.center_object_shibaDog {
+  position: absolute;
+  left: 45%;
+  margin-top: 245px;
+  width: 193.5px;
+  height: 180px;
+}
+
+.center_object_button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 45px 15px;
+  gap: 15px;
+  position: absolute;
+  width: 215px;
+  height: 77px;
+  left: 850px;
+  top: 1475px;
+  color: #ffffff;
+  background: #e11d2e;
+  border-radius: 10px;
+  border: 0;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.center_rectangle1 {
+  position: absolute;
+  left: 26%;
+  top: 914px;
+}
+.center_rectangle2 {
+  position: absolute;
+  left: 31%;
+  top: 1026px;
+}
+.center_rectangle3 {
+  position: absolute;
+  left: 36%;
+  top: 1118px;
+}
+
+.center_group1 {
+  position: absolute;
+  left: 67%;
+  top: 1092px;
+  transition: 1s;
+}
+
+.center_group1:hover {
+  transform: scale(1.2);
+}
