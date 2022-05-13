@@ -119,6 +119,7 @@ select {
 
 .header_nav_li {
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .header_button {
