@@ -104,16 +104,8 @@ select {
   height: 50px;
   left: 92px;
   top: 25px;
+  cursor: pointer;
 }
-
-/* .header_nav {
-  display: flex;
-  position: absolute;
-  width: 1063px;
-  height: 20px;
-  left: 525px;
-  top: 40px;
-} */
 
 .header_nav_ul {
   display: flex;
@@ -137,10 +129,14 @@ select {
   top: 30px;
   color: #ffffff;
   margin-right: 92px;
-
+  cursor: pointer;
   background: #ac1216;
   border-radius: 10px;
   border: 0;
+  transition: 0.8s;
+}
+.header_button:hover {
+  transform: scale(1.1);
 }
 
 .header_content {
@@ -150,22 +146,34 @@ select {
   margin-top: 102px;
 }
 
-.header_item_h1 {
+.header_item_h3 {
   position: absolute;
   width: 848px;
-  height: 180px;
+  height: 174px;
   left: 92px;
   top: 168px;
-
   font-style: normal;
   font-weight: 800;
   font-size: 80px;
   line-height: 90px;
-
-  display: flex;
-  align-items: center;
-
   color: #e11d2e;
+}
+
+.header_item_h3_v {
+  position: absolute;
+  width: 848px;
+  height: 180px;
+  left: 92px;
+  top: 258px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 79px;
+  line-height: 90px;
+  color: #ffffff;
+}
+
+.header_item_span {
+  color: #ffffff;
 }
 
 .header_item_p1 {
@@ -205,6 +213,7 @@ select {
 
 .header_row_button1 {
   position: absolute;
+  cursor: pointer;
   width: 295px;
   height: 80px;
   left: 93px;
@@ -216,9 +225,13 @@ select {
   font-size: 25px;
   line-height: 30px;
 }
+.button:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  background: #0c0102;
+}
 .header_row_button2 {
-  box-sizing: border-box;
-
+  cursor: pointer;
   position: absolute;
   width: 379px;
   height: 80px;
@@ -274,7 +287,7 @@ select {
   bottom: 87.35%;
 }
 
-@keyframes scroll{
+@keyframes scroll {
   0% {
     transform: translate(0, 0);
   }
@@ -295,7 +308,7 @@ select {
   -webkit-animation: scroll 5s infinite linear;
   -moz-animation: scroll 5s infinite linear;
   animation: scroll 10s infinite linear;
-  background-image: url('../image/Group\ 18.svg');
+  background-image: url("../image/Group\ 18.svg");
   width: 220px;
   height: 38px;
   margin-left: -5px;
@@ -316,6 +329,13 @@ select {
   margin-top: 71px;
   margin-right: 10px;
   opacity: 0.1;
+  transition: 1s;
+  z-index: 1;
+}
+
+.line_img:hover {
+  transform: scale(1.2);
+  opacity: 1;
 }
 
 .object_earth {
@@ -362,7 +382,7 @@ select {
 .center_object_button {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   padding: 10px 45px 15px;
@@ -378,6 +398,11 @@ select {
   border: 0;
   font-size: 22px;
   margin-top: 20px;
+  z-index: 3;
+  transition: 0.8s;
+}
+.center_object_button:hover {
+  transform: scale(1.1);
 }
 
 .center_rectangle1 {
@@ -404,5 +429,27 @@ select {
 }
 
 .center_group1:hover {
+  transform: scale(1.2);
+}
+
+.center_group2 {
+  position: absolute;
+  left: 28%;
+  top: 1325px;
+  transition: 1s;
+}
+
+.center_group2:hover {
+  transform: scale(1.2);
+}
+
+.center_group3 {
+  position: absolute;
+  left: 58%;
+  top: 1657px;
+  transition: 1s;
+}
+
+.center_group3:hover {
   transform: scale(1.2);
 }
